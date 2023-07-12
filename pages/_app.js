@@ -1,13 +1,13 @@
-import Navbar from '../components/Navbar'
-import '../styles/globals.css'
-
+import Navbar from "../components/Navbar";
+import "../styles/globals.css";
+import { AuthContextProvider } from "@/services/auth.context";
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <AuthContextProvider>
       <Navbar />
       <Component {...pageProps} />
-    </div>
-  )
+    </AuthContextProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
